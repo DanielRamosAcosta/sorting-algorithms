@@ -40,12 +40,38 @@ namespace dra{
 		void bubble(std::vector<T>& vec)
 		{
 			bool change = true;
-			for(std::size_t i = 1; i < vec.size() && change; i++, change = true)
+			for(std::size_t i = 1; (i < vec.size()) && (change); i++){
+				change = false;
 				for(std::size_t j = vec.size()-1; j >= i; j--)
 					if( vec[j] < vec[j-1]){
 						std::swap(vec[j-1], vec[j]);
 						change = false;
 					}
+			}
+		}
+
+		template<typename T>
+		void cocktail(std::vector<T>& vec)
+		{
+			bool change = true;
+
+			for(std::size_t beg = 1, end = vec.size() - 1; (beg < end) && (change);){
+				change = false;
+				for(std::size_t j = beg; j <= end; j++)
+					if(vec[j] < vec[j-1]){
+						std::swap(vec[j-1], vec[j]);
+						change = true;
+					}
+				
+				end--;
+				for(std::size_t j = end; j >= beg; j--)
+					if(vec[j] < vec[j-1]){
+						std::swap(vec[j-1], vec[j]);
+						change = true;
+					}
+				
+				beg++;
+			}
 		}
 
 		template<typename T>
@@ -94,36 +120,6 @@ namespace dra{
 						min = j;
 
 				std::swap(vec[i], vec[min]);
-			}
-		}
-
-		template<typename T>
-		void cocktail(std::vector<T>& vec)
-		{
-			//std::size_t beg = 1 ;
-			//std::size_t end = vec.size()-1;
-			bool change = true;
-
-			//while((beg < end) && (change))
-			for(std::size_t beg = 1, end = vec.size() - 1; (beg < end) && (change); change = false)
-			{
-				//change = false;
-				for (std::size_t j = beg; j <= end; j++){
-					if (vec[j] < vec[j-1])
-					{
-						std::swap(vec[j-1], vec[j]);
-						change = true;
-					}
-				}
-				end--;
-				for (std::size_t j = end; j >= beg; j--){
-					if (vec[j] < vec[j-1])
-					{
-						std::swap(vec[j-1], vec[j]);
-						change = true;
-					}
-				}
-				beg++;
 			}
 		}
 
