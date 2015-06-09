@@ -8,9 +8,9 @@
 #endif
 
 #ifdef _64ARCH
-	typedef long int signed_int;
+typedef long int signed_int;
 #else
-	typedef long long int signed_int;
+typedef long long int signed_int;
 #endif
 
 namespace dra{
@@ -53,7 +53,7 @@ namespace dra{
 		{
 
 		}
-		
+
 		template<typename T>
 		void insertion(std::vector<T>& vec)
 		{
@@ -92,15 +92,39 @@ namespace dra{
 				for(std::size_t j = i + 1; j < vec.size(); j++)
 					if(vec[j] < vec[min])
 						min = j;
-	
+
 				std::swap(vec[i], vec[min]);
 			}
 		}
 
 		template<typename T>
-		void shake(std::vector<T>& vec)
+		void cocktail(std::vector<T>& vec)
 		{
+			//std::size_t beg = 1 ;
+			//std::size_t end = vec.size()-1;
+			bool change = true;
 
+			//while((beg < end) && (change))
+			for(std::size_t beg = 1, end = vec.size() - 1; (beg < end) && (change); change = false)
+			{
+				//change = false;
+				for (std::size_t j = beg; j <= end; j++){
+					if (vec[j] < vec[j-1])
+					{
+						std::swap(vec[j-1], vec[j]);
+						change = true;
+					}
+				}
+				end--;
+				for (std::size_t j = end; j >= beg; j--){
+					if (vec[j] < vec[j-1])
+					{
+						std::swap(vec[j-1], vec[j]);
+						change = true;
+					}
+				}
+				beg++;
+			}
 		}
 
 		template<typename T>
@@ -110,3 +134,34 @@ namespace dra{
 		}
 	}
 }
+
+
+/*
+
+		void cocktail(std::vector<T>& vec)
+		{
+			std::size_t beg = 1 ;
+			std::size_t end = vec.size()-1;
+			std::size_t cam = vec.size();
+			while (beg < end)
+			{
+				for (std::size_t j = end; j >= beg; j--){
+					if (vec[j] < vec[j-1])
+					{
+						std::swap(vec[j-1], vec[j]);
+						cam = j ;
+					}
+				}
+				beg = cam + 1 ;
+				for (std::size_t j = beg; j <= end; j++){
+					if (vec[j] < vec[j-1])
+					{
+						std::swap(vec[j-1], vec[j]);
+						cam = j;
+					}
+				}
+				end = cam - 1 ;
+			}
+		}
+
+*/
