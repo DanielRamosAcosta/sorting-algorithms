@@ -173,6 +173,10 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Z/sorting-algorithms"
+	],
 	"file_history":
 	[
 		"/Volumes/Daniel/abstract-data-types/src/hashTable.cpp",

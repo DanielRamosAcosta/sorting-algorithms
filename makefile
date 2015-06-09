@@ -9,5 +9,14 @@ BINDIR = bin
 HEXT = hpp
 SEXT = cpp
 
-insertionSort: $(INCDIR)/insertionSort.$(HEXT) $(SRCDIR)/insertionSort.$(SEXT)
-	$(CXX) $(CXXFLAGS) $(SRCDIR)/$@.$(SEXT)
+insertionSort: $(INCDIR)/insertionSort.$(HEXT) $(SRCDIR)/main.$(SEXT)
+	$(CXX) $(CXXFLAGS) $(SRCDIR)/main.$(SEXT)
+
+selectionSort: $(INCDIR)/selectionSort.$(HEXT) $(SRCDIR)/main.$(SEXT)
+	$(CXX) $(CXXFLAGS) $(SRCDIR)/main.$(SEXT)
+
+doc:
+	doxygen
+
+clean:
+	rm -rf bin/*
