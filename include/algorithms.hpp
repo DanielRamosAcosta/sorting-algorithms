@@ -39,10 +39,13 @@ namespace dra{
 		template<typename T>
 		void bubble(std::vector<T>& vec)
 		{
-			for(std::size_t i = 1; i < vec.size(); i++)
+			bool change = true;
+			for(std::size_t i = 1; i < vec.size() && change; i++, change = true)
 				for(std::size_t j = vec.size()-1; j >= i; j--)
-					if( vec[j] < vec[j-1])
+					if( vec[j] < vec[j-1]){
 						std::swap(vec[j-1], vec[j]);
+						change = false;
+					}
 		}
 
 		template<typename T>
