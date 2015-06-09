@@ -1,0 +1,351 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"insert"
+			],
+			[
+				"pro",
+				"probe"
+			],
+			[
+				"bu",
+				"bucket_"
+			],
+			[
+				"probe",
+				"probe_mode_"
+			],
+			[
+				"hashmo",
+				"hash_mode_"
+			],
+			[
+				"h",
+				"hash_mode_t"
+			],
+			[
+				"hash",
+				"hashTable"
+			],
+			[
+				"dn",
+				"dni_"
+			],
+			[
+				"dni",
+				"dni_t"
+			],
+			[
+				"ke",
+				"keyHumanDNI"
+			],
+			[
+				"key",
+				"keyHumanDNI"
+			],
+			[
+				"hu",
+				"human_ptr_"
+			],
+			[
+				"t",
+				"test_bench"
+			],
+			[
+				"m",
+				"mbucket"
+			],
+			[
+				"su",
+				"surname_"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"HUM",
+				"HUMAN_FILES"
+			],
+			[
+				"incl",
+				"INCLUDES"
+			],
+			[
+				"nam",
+				"name"
+			],
+			[
+				"na",
+				"name_"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"st",
+				"std"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"re",
+				"record"
+			],
+			[
+				"s",
+				"size_t"
+			],
+			[
+				"HAS",
+				"HASHTABLE_FILES"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/Daniel/abstract-data-types/src/hashTable.cpp",
+		"/Volumes/Daniel/abstract-data-types/include/hashTable/bucket.hpp",
+		"/Volumes/Daniel/abstract-data-types/include/hashTable/hashTable.hpp",
+		"/Volumes/Daniel/abstract-data-types/src/bucket.cpp",
+		"/Volumes/Daniel/abstract-data-types/include/key/key.hpp",
+		"/Volumes/Daniel/abstract-data-types/include/key/keyHumanDNI.hpp",
+		"/Volumes/Daniel/abstract-data-types/include/key/keyHuman.hpp",
+		"/Volumes/Daniel/abstract-data-types/makefile",
+		"/Volumes/Daniel/abstract-data-types/include/utils/common.hpp",
+		"/Volumes/Daniel/abstract-data-types/include/examples/human.hpp",
+		"/Volumes/Daniel/abstract-data-types/abstract-data-types.sublime-project",
+		"/Volumes/Daniel/abstract-data-types/src/human.cpp",
+		"/Users/Daniel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Daniel/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Volumes/Daniel/abstract-data-types/include/utils/random.hpp",
+		"/Volumes/Daniel/abstract-data-types/include/linkedLists/doublyLinkedList.hpp"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"T",
+			"\"",
+			"Coleman",
+			"2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sorting-algorithms.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 279.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
