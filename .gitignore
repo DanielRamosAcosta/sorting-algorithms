@@ -1,0 +1,4 @@
+#Ignore Mac OS X temp files
+
+._DS_STORE
+.DS_Store

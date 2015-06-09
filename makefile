@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -I $(INCDIR) -o $(BINDIR)/$@ -fdiagnostics-color=always
+CXXFLAGS = -std=c++11 -Wall -I $(INCDIR) -o $(BINDIR)/algorithms -fdiagnostics-color=always -D_DEBUG
 
 INCDIR = include
 SRCDIR = src
