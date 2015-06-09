@@ -6,14 +6,8 @@ SRCDIR = src
 DOCDIR = doc
 BINDIR = bin
 
-HEXT = hpp
-SEXT = cpp
-
-insertionSort: $(INCDIR)/insertionSort.$(HEXT) $(SRCDIR)/main.$(SEXT)
-	$(CXX) $(CXXFLAGS) $(SRCDIR)/main.$(SEXT)
-
-selectionSort: $(INCDIR)/selectionSort.$(HEXT) $(SRCDIR)/main.$(SEXT)
-	$(CXX) $(CXXFLAGS) $(SRCDIR)/main.$(SEXT)
+all: $(INCDIR)/algorithms.hpp $(SRCDIR)/main.cpp
+	$(CXX) $(CXXFLAGS) $(SRCDIR)/main.cpp
 
 doc:
 	doxygen
