@@ -13,4 +13,4 @@ doc:
 	doxygen
 
 clean:
-	rm -rf bin/*
+	rm -rf bin/* ._.DS_Store .DS_Store

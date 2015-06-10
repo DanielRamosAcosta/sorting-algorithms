@@ -52,6 +52,9 @@ namespace dra{
 
 		template<typename T>
 		static void quick(std::vector<T>& vec, std::size_t beg, std::size_t end);
+
+		template<typename T>
+		static void mix_sorted(std::vector<T>& vec, std::vector<T>& left, std::vector<T>& right);
 	};
 
 	template<typename T>
@@ -160,7 +163,41 @@ namespace dra{
 	template<typename T>
 	void sort::merge(std::vector<T>& vec)
 	{
+		if(vec.size() == 1)
+			return;
 
+		auto mid = vec.begin() + (vec.size()/2);
+
+		std::vector<T> left(vec.begin(), mid);
+		std::vector<T> right(mid, vec.end());
+
+		merge(left);
+		merge(right);
+
+		mix_sorted(vec, left, right);
+	}
+
+	template<typename T>
+	void sort::mix_sorted(std::vector<T>& vec, std::vector<T>& left, std::vector<T>& right)
+	{
+		std::size_t i, j, k;
+
+		for(i = 0, j = 0, k = 0; (i < left.size()) && (j < right.size()); k++){
+			if(left[i] < right[j]){
+				vec[k] = left[i];
+				i++;
+			}
+			else{
+				vec[k] = right[j];
+				j++;
+			}
+		}
+
+		for(i = i; i < left.size(); i++, k++)
+			vec[k] = left[i];
+
+		for(j = j; j < right.size(); j++, k++)
+			vec[k] = right[j];
 	}
 
 	template<typename T>
