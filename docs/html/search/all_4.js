@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['license_2emd',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]],
-  ['license',['LICENSE',['../md__l_i_c_e_n_s_e.html',1,'']]]
+  ['heap',['heap',['../classdra_1_1sort.html#aee44ed23df85d0ed68c5ebc16ae5e734',1,'dra::sort']]]
 ];

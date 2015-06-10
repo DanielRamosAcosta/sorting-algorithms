@@ -49,6 +49,9 @@ namespace dra{
 	private:
 		template<typename T>
 		static void shift_down(std::vector<T>& vec, std::size_t i, std::size_t n);
+
+		template<typename T>
+		static void quick(std::vector<T>& vec, std::size_t beg, std::size_t end);
 	};
 
 	template<typename T>
@@ -163,7 +166,27 @@ namespace dra{
 	template<typename T>
 	void sort::quick(std::vector<T>& vec)
 	{
+		quick(vec, 0, vec.size());
+	}
 
+	template<typename T>
+	void sort::quick(std::vector<T>& vec, std::size_t beg, std::size_t end)
+	{
+		std::size_t b = beg;
+		std::size_t e = end;
+		T piv = vec[(beg + end)/2];
+
+		while (b <= e){
+			while (vec[b] < piv) b++;
+			while (vec[e] > piv) e--;
+			if (b <= e){
+				std::swap(vec[b], vec[e]);
+				b++; e--;
+			}
+		}
+
+		if (beg < e) quick(vec, beg, e);
+		if (b < end) quick(vec, b, end);
 	}
 
 	template<typename T>

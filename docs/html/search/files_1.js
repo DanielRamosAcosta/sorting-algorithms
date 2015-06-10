@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['heapsort_2ecpp',['heapSort.cpp',['../heap_sort_8cpp.html',1,'']]],
-  ['heapsort_2ehpp',['heapSort.hpp',['../heap_sort_8hpp.html',1,'']]]
+  ['license_2emd',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]]
 ];
