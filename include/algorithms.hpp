@@ -21,7 +21,7 @@ namespace dra{
 	public:
 		template<typename T>
 		static void binary(std::vector<T>& vec);
-		
+
 		template<typename T>
 		static void bubble(std::vector<T>& vec);
 
@@ -125,7 +125,7 @@ namespace dra{
 	{
 		for(signed_int i = vec.size()/2 - 1; i >= 0; i--)
 			shift_down(vec, i, vec.size());
-		
+
 		for(signed_int i = vec.size() - 1; i > 0; i--){
 			std::swap(vec[0], vec[i]);
 			shift_down(vec, 0, i-1);
@@ -139,7 +139,7 @@ namespace dra{
 		{
 			std::size_t c1 = i * 2 + 1;
 			std::size_t c2 = i * 2 + 2;
-			
+
 			std::size_t max = c1;
 
 			if((c2 < n) && (vec[c1] < vec[c2])) //if c2 exists and is bigger than c1
@@ -216,12 +216,14 @@ namespace dra{
 	void sort::quick(std::vector<T>& vec, std::size_t beg, std::size_t end)
 	{
 		std::size_t b = beg;
-		std::size_t e = end;
+		std::size_t e = end-1;
+
 		T piv = vec[(beg + end)/2];
 
 		while (b <= e){
 			while (vec[b] < piv) b++;
 			while (vec[e] > piv) e--;
+
 			if (b <= e){
 				std::swap(vec[b], vec[e]);
 				b++; e--;
@@ -236,8 +238,8 @@ namespace dra{
 	void sort::radix(std::vector<T>& vec)
 	{
 		int m = *std::max_element(vec.begin(), vec.end());
-    	for (int exp = 1; m / exp > 0; exp *= 10)
-        	count_sort(vec, exp);
+		for (int exp = 1; m / exp > 0; exp *= 10)
+        		count_sort(vec, exp);
 	}
 
 	template<typename T>
