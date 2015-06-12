@@ -14,6 +14,8 @@ typedef long int signed_int;
 typedef long long int signed_int;
 #endif
 
+#define SHELL_SORT_ALPHA 0.5
+
 namespace dra{
 	class sort{
 	public:
@@ -55,6 +57,10 @@ namespace dra{
 
 		template<typename T>
 		static void mix_sorted(std::vector<T>& vec, std::vector<T>& left, std::vector<T>& right);
+
+		template<typename T>
+		static void count_sort(std::vector<T>& vec, int exp);
+
 	};
 
 	template<typename T>
@@ -229,7 +235,27 @@ namespace dra{
 	template<typename T>
 	void sort::radix(std::vector<T>& vec)
 	{
+		int m = *std::max_element(vec.begin(), vec.end());
+    	for (int exp = 1; m / exp > 0; exp *= 10)
+        	count_sort(vec, exp);
+	}
 
+	template<typename T>
+	void sort::count_sort(std::vector<T>& vec, int exp)
+	{
+		std::vector<T> output(vec.size());
+		std::vector<int> count(10, 0);
+
+		for (std::size_t i = 0; i < vec.size(); i++)
+			count[(vec[i]/exp)%10]++;
+		for(std::size_t i = 1; i < 10; i++)
+			count[i] += count[i - 1];
+
+		for (signed_int i = vec.size() - 1; i >= 0; i--){
+			output[count[(vec[i] / exp) % 10] - 1] = vec[i];
+			count[(vec[i] / exp) % 10]--;
+		}
+		vec = output;
 	}
 
 	template<typename T>
@@ -248,7 +274,20 @@ namespace dra{
 	template<typename T>
 	void sort::shell(std::vector<T>& vec)
 	{
+		std::size_t delta = vec.size();
+		while(delta > 1){
+			delta *= SHELL_SORT_ALPHA;;
 
+			for(std::size_t i = delta; i < vec.size(); i++){
+				T it = vec[i];
+
+				std::size_t j;
+				for(j = i; (j >= delta) && (it < vec[j-delta]); j-=delta)
+					vec[j] = vec[j-delta];
+
+				vec[j] = it;
+			}
+		}
 	}
 
 }
